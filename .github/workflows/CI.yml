@@ -31,9 +31,15 @@ jobs:
           node-version: 16
 
       - run: npm ci
+
       # Install Depedencies
       - name: Install dependencies
         run: npm install
+
+      #Running lint
+      - name: Run Lint
+        run: npm run lint
+
       # Run Test Scripts
       - name: Test
         run: npm test
